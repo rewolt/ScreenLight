@@ -15,7 +15,6 @@ namespace ScreenLightService
         {
             InitializeComponent();
             _screenCapturer = new ScreenCapturer();
-
         }
 
         private void MainWindow_Resize(object sender, EventArgs e)
@@ -32,20 +31,6 @@ namespace ScreenLightService
             }
         }
 
-        private void notifyIcon_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.Show();
-            this.WindowState = FormWindowState.Normal;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var height = pictureBox1.Height;
-            var width = pictureBox1.Width;
-            var frame = _screenCapturer.GetFrame();
-            frame = ResizeImage(frame, width, height);
-            pictureBox1.Image = frame;
-        }
 
         private static Bitmap ResizeImage(Image image, int width, int height)
         {
@@ -70,6 +55,11 @@ namespace ScreenLightService
             }
 
             return destImage;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            pictureBox1.Image = ResizeImage(_screenCapturer.GetFrame(), pictureBox1.Width, pictureBox1.Height);
         }
     }
 }
