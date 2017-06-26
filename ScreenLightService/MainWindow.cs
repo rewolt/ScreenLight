@@ -59,7 +59,7 @@ namespace ScreenLightService
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            pictureBox1.Image = ResizeImage(_screenCapturer.GetFrame(), pictureBox1.Width, pictureBox1.Height);
+            //pictureBox1.Image = ResizeImage(_screenCapturer.GetFrame(), pictureBox1.Width, pictureBox1.Height);
         }
     }
 }
