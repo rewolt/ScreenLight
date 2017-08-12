@@ -32,15 +32,19 @@
             this.bt_reset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ledMarkerControl1 = new LEDMarkerControl.LEDMarkerControl();
             ((System.ComponentModel.ISupportInitialize)(this.pb_main)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pb_main
             // 
-            this.pb_main.Location = new System.Drawing.Point(12, 86);
+            this.pb_main.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_main.Location = new System.Drawing.Point(18, 18);
+            this.pb_main.Margin = new System.Windows.Forms.Padding(9);
             this.pb_main.Name = "pb_main";
-            this.pb_main.Size = new System.Drawing.Size(774, 396);
+            this.pb_main.Size = new System.Drawing.Size(798, 396);
             this.pb_main.TabIndex = 0;
             this.pb_main.TabStop = false;
             // 
@@ -65,24 +69,38 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.bt_reset);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 442);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(297, 58);
+            this.groupBox1.Size = new System.Drawing.Size(141, 58);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "LED config";
+            // 
+            // ledMarkerControl1
+            // 
+            this.ledMarkerControl1.BackColor = System.Drawing.Color.Transparent;
+            this.ledMarkerControl1.Location = new System.Drawing.Point(244, 202);
+            this.ledMarkerControl1.Name = "ledMarkerControl1";
+            this.ledMarkerControl1.Size = new System.Drawing.Size(17, 15);
+            this.ledMarkerControl1.TabIndex = 4;
+            this.ledMarkerControl1.Load += new System.EventHandler(this.ledMarkerControl1_Load);
             // 
             // LedPositionConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 494);
+            this.ClientSize = new System.Drawing.Size(833, 512);
+            this.Controls.Add(this.ledMarkerControl1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pb_main);
             this.Name = "LedPositionConfig";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LED Position Config";
+            this.ResizeEnd += new System.EventHandler(this.LedPositionConfig_ResizeEnd);
+            this.Resize += new System.EventHandler(this.LedPositionConfig_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pb_main)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -96,5 +114,6 @@
         private System.Windows.Forms.Button bt_reset;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private LEDMarkerControl.LEDMarkerControl ledMarkerControl1;
     }
 }
