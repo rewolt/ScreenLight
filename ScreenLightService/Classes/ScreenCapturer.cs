@@ -109,7 +109,6 @@ namespace ScreenLightService.Classes
                 User32.ReleaseDC(handle, hdcSrc);
                 Logger.Log(ex);
             }
-            
         }
 
         /// <summary>
