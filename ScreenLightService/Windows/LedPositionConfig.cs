@@ -1,4 +1,5 @@
-﻿using ScreenLightService.Classes;
+﻿using ScreenLightService.Models;
+using ScreenLightService.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

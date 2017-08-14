@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ScreenLightService.Classes
 {
-    class Logger
+    public class Logger
     {
         public static void Log(Exception ex)
         {

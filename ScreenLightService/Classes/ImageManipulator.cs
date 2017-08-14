@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ScreenLightService.Interfaces;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace ScreenLightService.Classes
 {
-    class ImageManipulator
+    public class ImageManipulator : IImageManipulate
     {
-        private Rectangle destRect;
-        private Bitmap destImage;
+        public Rectangle Rectangle { get; set; }
+        public Bitmap Image { get; set; }
+
+        public Image ImageResize()
+        {
+            throw new NotImplementedException();
+        }
 
         public Image ResizeImage(Image image, int width, int height)
         {
-            destRect = new Rectangle(0, 0, width, height);
-            destImage = new Bitmap(width, height);
+            Rectangle = new Rectangle(0, 0, width, height);
+            Image = new Bitmap(width, height);
 
-            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+            Image.SetResolution(image.HorizontalResolution, image.VerticalResolution);
 
-            using (var graphics = Graphics.FromImage(destImage))
+            using (var graphics = Graphics.FromImage(Image))
             {
                 graphics.CompositingMode = CompositingMode.SourceCopy;
                 graphics.CompositingQuality = CompositingQuality.HighSpeed;
@@ -32,10 +34,10 @@ namespace ScreenLightService.Classes
                 using (var wrapMode = new ImageAttributes())
                 {
                     wrapMode.SetWrapMode(WrapMode.TileFlipXY);
-                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                    graphics.DrawImage(image, Rectangle, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
                 }
             }
-            return destImage;
+            return Image;
         }
     }
 }

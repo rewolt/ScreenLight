@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace ScreenLightService.Classes
 {
-    class ScreenCapturer
+    public class ScreenCapturer
     {
         private Image screen;
         private CancellationTokenSource cts;

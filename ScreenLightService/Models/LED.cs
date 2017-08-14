@@ -1,5 +1,4 @@
-﻿
-namespace ScreenLightService.Classes
+﻿namespace ScreenLightService.Models
 {
     public class LED
     {

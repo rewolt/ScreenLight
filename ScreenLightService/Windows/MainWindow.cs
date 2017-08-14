@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using ScreenLightService.Models;
 using ScreenLightService.Classes;
 using ScreenLightService.Windows;
 

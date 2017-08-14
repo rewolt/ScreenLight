@@ -76,10 +76,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\LED.cs" />
+    <Compile Include="Models\LED.cs" />
     <Compile Include="Classes\ImageManipulator.cs" />
-    <Compile Include="Classes\LEDList.cs" />
+    <Compile Include="Models\LEDList.cs" />
     <Compile Include="Classes\Logger.cs" />
+    <Compile Include="Interfaces\IImageManipulate.cs" />
     <Compile Include="Windows\LedPositionConfig.cs">
       <SubType>Form</SubType>
     </Compile>
