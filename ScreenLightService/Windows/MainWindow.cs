@@ -10,7 +10,6 @@ namespace ScreenLightService
     {
         ScreenCapturer _screenCapturer;
         ImageManipulator _im;
-        LEDList ledList;
 
         public MainWindow()
         {
@@ -34,13 +33,13 @@ namespace ScreenLightService
         }
 
 
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CloseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             _screenCapturer.Stop();
             this.Close();
         }
 
-        private void lEDSettingsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void LEDSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new LedPositionConfig().Show();
         }

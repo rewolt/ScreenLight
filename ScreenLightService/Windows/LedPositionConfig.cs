@@ -14,7 +14,6 @@ namespace ScreenLightService.Windows
 {
     public partial class LedPositionConfig : Form
     {
-        private LEDList ledList;
         private Image frame;
         private ImageManipulator im;
         private const int windowSizePercent = 90;
@@ -23,7 +22,6 @@ namespace ScreenLightService.Windows
         public LedPositionConfig()
         {
             InitializeComponent();
-            ledList = new LEDList();
 
             im = new ImageManipulator();
             frame = ScreenCapturer.GetSingleFrame();
@@ -34,7 +32,7 @@ namespace ScreenLightService.Windows
 
         private void bt_reset_Click(object sender, EventArgs e)
         {
-            ledList = null;
+            LedEngine.RemoveAll();
         }
 
         private void LedPositionConfig_ResizeEnd(object sender, EventArgs e)
@@ -51,6 +49,10 @@ namespace ScreenLightService.Windows
         private void ledMarkerControl1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pb_main_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -34,7 +34,7 @@
             // 
             this.BackColor = System.Drawing.Color.Transparent;
             this.Name = "LEDMarkerControl";
-            this.Size = new System.Drawing.Size(21, 19);
+            this.Size = new System.Drawing.Size(12, 12);
             this.ResumeLayout(false);
 
         }
