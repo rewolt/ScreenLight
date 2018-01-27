@@ -37,7 +37,7 @@
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setColorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lEDSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LEDSettingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notificationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facebookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +89,7 @@
             // 
             this.configToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setColorToolStripMenuItem,
-            this.lEDSettingsToolStripMenuItem});
+            this.LEDSettingsToolStripMenuItem});
             this.configToolStripMenuItem.Name = "configToolStripMenuItem";
             this.configToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.configToolStripMenuItem.Text = "Config";
@@ -102,9 +102,10 @@
             // 
             // lEDSettingsToolStripMenuItem
             // 
-            this.lEDSettingsToolStripMenuItem.Name = "lEDSettingsToolStripMenuItem";
-            this.lEDSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.lEDSettingsToolStripMenuItem.Text = "LED settings...";
+            this.LEDSettingsToolStripMenuItem.Name = "lEDSettingsToolStripMenuItem";
+            this.LEDSettingsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.LEDSettingsToolStripMenuItem.Text = "LED settings...";
+            this.LEDSettingsToolStripMenuItem.Click += new System.EventHandler(this.LEDSettingsToolStripMenuItem_Click);
             // 
             // notificationsToolStripMenuItem
             // 
@@ -154,7 +155,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setColorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lEDSettingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LEDSettingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem notificationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gmailToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem facebookToolStripMenuItem;

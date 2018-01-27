@@ -81,11 +81,11 @@
     <Compile Include="Classes\Logger.cs" />
     <Compile Include="Interfaces\IImageManipulate.cs" />
     <Compile Include="Models\Point.cs" />
-    <Compile Include="Windows\LedPositionConfig.cs">
+    <Compile Include="Windows\LedPositionWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Windows\LedPositionConfig.Designer.cs">
-      <DependentUpon>LedPositionConfig.cs</DependentUpon>
+    <Compile Include="Windows\LedPositionWindow.Designer.cs">
+      <DependentUpon>LedPositionWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\MainWindow.cs">
       <SubType>Form</SubType>
@@ -96,8 +96,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\ScreenCapturer.cs" />
-    <EmbeddedResource Include="Windows\LedPositionConfig.resx">
-      <DependentUpon>LedPositionConfig.cs</DependentUpon>
+    <EmbeddedResource Include="Windows\LedPositionWindow.resx">
+      <DependentUpon>LedPositionWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\MainWindow.resx">
       <DependentUpon>MainWindow.cs</DependentUpon>

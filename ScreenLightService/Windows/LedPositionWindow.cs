@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace ScreenLightService.Windows
 {
-    public partial class LedPositionConfig : Form
+    public partial class LedPositionWindow : Form
     {
         private Image frame;
         private ImageManipulator im;
         private const int windowSizePercent = 90;
         private const int imageSizePercent = 90;
 
-        public LedPositionConfig()
+        public LedPositionWindow()
         {
             InitializeComponent();
 
@@ -53,6 +53,18 @@ namespace ScreenLightService.Windows
 
         private void pb_main_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void pb_main_MouseDown(object sender, MouseEventArgs e)
+        {
+            var ledMarkerControl = new LEDMarkerControl.LEDMarkerControl();
+            ledMarkerControl.BackColor = System.Drawing.Color.Transparent;
+            ledMarkerControl.Location = new System.Drawing.Point(e.Y, e.X);
+            ledMarkerControl.Name = "ledMarkerControl1";
+            ledMarkerControl.Size = new System.Drawing.Size(12, 12);
+            ledMarkerControl.TabIndex = 5;
+            this.Controls.Add(ledMarkerControl);
         }
     }
 }

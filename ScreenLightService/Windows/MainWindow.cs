@@ -41,7 +41,7 @@ namespace ScreenLightService
 
         private void LEDSettingsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new LedPositionConfig().Show();
+            new LedPositionWindow().Show();
         }
     }
 }

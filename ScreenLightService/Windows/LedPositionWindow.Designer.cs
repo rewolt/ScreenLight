@@ -1,6 +1,6 @@
 ﻿namespace ScreenLightService.Windows
 {
-    partial class LedPositionConfig
+    partial class LedPositionWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@
             this.pb_main.Size = new System.Drawing.Size(798, 396);
             this.pb_main.TabIndex = 0;
             this.pb_main.TabStop = false;
-            this.pb_main.Click += new System.EventHandler(this.pb_main_Click);
+            this.pb_main.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pb_main_MouseDown);
             // 
             // bt_reset
             // 
@@ -83,7 +83,7 @@
             // ledMarkerControl1
             // 
             this.ledMarkerControl1.BackColor = System.Drawing.Color.Transparent;
-            this.ledMarkerControl1.Location = new System.Drawing.Point(45, 294);
+            this.ledMarkerControl1.Location = new System.Drawing.Point(222, 442);
             this.ledMarkerControl1.Name = "ledMarkerControl1";
             this.ledMarkerControl1.Size = new System.Drawing.Size(12, 12);
             this.ledMarkerControl1.TabIndex = 4;
